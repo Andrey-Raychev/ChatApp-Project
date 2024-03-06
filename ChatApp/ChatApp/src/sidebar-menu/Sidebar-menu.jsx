@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
-import { logoutUser } from "../../service/auth.service";
-import { AppContext } from "../../appContext/AppContext";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { logoutUser } from "../service/auth.service";
+import { AppContext } from "../appContext/AppContext";
 
 export function SidebarMenu({
   onProfileClick,
@@ -14,10 +14,12 @@ export function SidebarMenu({
 }) {
   const { user, userData, setContext } = useContext(AppContext);
   const [photoURL] = useState(user?.photoURL);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
-  const [selectedTab, setSelectedTab] = useState('chats');
   const navigate = useNavigate();
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [selectedTab, setSelectedTab] = useState('chats');
+
   // const toggleDarkMode = () => {
   //     setIsDarkMode(!isDarkMode);
   //   };

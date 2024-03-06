@@ -1,23 +1,26 @@
 import React, { useState, useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route, Switch } from "react-router-dom";
-import { auth } from "./config/firebase-config";
-import "./App.css";
-import { Index } from "./authViews/Index";
-import { RecoverPassword } from "./authViews/RecoverPassword";
-import { LockScreen } from "./authViews/LockScreen";
-import { Login } from "./authViews/Login";
-import { Register } from "./authViews/Register";
-import { Chats } from "./components/Chats/Chats";
-import { Meta } from "./components/Meta/Meta";
-import { Profile } from "./components/Profile/Profile";
-import { SidebarMenu } from "./components/Sidebar-menu/SidebarMenu";
-import { UserProfileDetails } from "./components/UserProfileDetails/UserProfileDetails";
-import { AppContext } from "./appContext/AppContext";
-import Authenticated from "./authenticated/Authenticated";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { getUserData } from "./service/users.service";
-import { Switcher } from "./components/Switcher/Switcher"
+import { auth } from "./firebase";
+import { Index } from "./Index";
 import { RecoilRoot } from 'recoil';
+import { useAuthState } from "react-firebase-hooks/auth";
+import { RecoverPassword } from "./authentication/RecoverPassword";
+import { LockScreen } from "./authentication/LockScreen";
+import { Login } from "./authentication/Login";
+import { Register } from "./authentication/Register";
+import { Meta } from "./meta/Meta";
+import { Profile } from "./profile/Profile";
+import { SidebarMenu } from "./sidebar-menu/Sidebar-menu";
+import { AppContext } from "./appContext/AppContext";
+import Authenticated from "./components/Authenticated";
+import { getUserData } from "./service/users.service";
+
+import { Chats } from "./components/Chats/Chats";
+import { UserProfileDetails } from "./components/UserProfileDetails/UserProfileDetails";
+
+
+import "./App.css";
+import { Switcher } from "./components/Switcher/Switcher"
 import { Settings } from "./components/Settings/Settings";
 import { Contacts } from "./components/Contacts/Contacts";
 import { Groups } from "./components/Groups/Groups";
