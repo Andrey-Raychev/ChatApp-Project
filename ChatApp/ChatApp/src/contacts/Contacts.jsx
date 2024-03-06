@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { AppContext } from '../../appContext/AppContext';
-import { auth } from '../../config/firebase-config';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { updateUserData, getUserByUid } from '../../service/users.service';
 import { get, query, orderByChild, equalTo, ref, update } from 'firebase/database';
-import { db } from '../../config/firebase-config';
+import { db } from '../config/firebase-config';
+import { auth } from '../config/firebase-config';
+import { AppContext } from '../appContext/AppContext';
+import { updateUserData, getUserByUid } from '../service/users.service';
 
 export function Contacts() {
   const { userData } = useContext(AppContext);

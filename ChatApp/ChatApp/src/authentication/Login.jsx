@@ -1,12 +1,10 @@
-import { Meta } from "../components/Meta/Meta";
-import { NavLink } from 'react-router-dom';
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, Link, useLocation, useNavigate} from 'react-router-dom';
+import { Meta } from "../components/Meta/Meta";
 import { AppContext } from "../appContext/AppContext";
 import { loginUser } from "../service/auth.service";
 
 export function Login() {
-
   const { user, setContext } = useContext(AppContext);
   const [form, setForm] = useState({
     email: "",

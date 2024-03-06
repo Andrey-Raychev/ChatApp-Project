@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { Meta } from '../components/Meta/Meta';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { Meta } from '../meta/Meta.jsx';
 import { registerUser } from '../service/auth.service.js';
-import { createUserProfile, getUserByUid } from '../service/users.service';
+import { getUserByUid, createUserProfile } from '../service/users.service.js';
 import { AppContext } from '../appContext/AppContext.js';
-import {format} from 'date-fns';
+import { format } from 'date-fns';
 
 export function Register() {
   const { setContext } = useContext(AppContext);

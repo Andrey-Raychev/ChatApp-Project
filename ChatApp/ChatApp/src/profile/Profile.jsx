@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AppContext } from "../../appContext/AppContext";
-import { uploadProfileImage } from "../../service/auth.service";
 import { useNavigate } from "react-router-dom";
-import { updateUserData } from "../../service/users.service";
-
+import { AppContext } from "../../appContext/AppContext";
+import { uploadProfileImage } from "../service/auth.service";
+import { updateUserData } from "../service/users.service";
 
 export function Profile() {
   const navigate = useNavigate();

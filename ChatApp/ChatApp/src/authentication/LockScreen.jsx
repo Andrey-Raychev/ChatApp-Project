@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Meta } from "../components/Meta/Meta";
-import { Login } from "./Login";
+import { Meta } from '../meta/Meta.jsx';
+import { Login } from './Login.jsx';
 import { AppContext } from '../appContext/AppContext.js';
 
 export function LockScreen() {
